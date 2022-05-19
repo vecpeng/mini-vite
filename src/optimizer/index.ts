@@ -2,8 +2,8 @@ import path from 'path';
 import { build } from "esbuild";
 import { scanPlugin } from "./scanPlguin";
 import {green} from "picocolors";
-import { preBundlePlugin } from './prebundlePlugin'
-import {PRE_BUNDLE_DIR} from "../constants";
+import { preBundlePlugin } from './preBundlePlugin'
+import {PRE_BUNDLE_DIR} from "../node/constants";
 
 export async function optimize(root: string) {
     // 1. 确定入口

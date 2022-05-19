@@ -1,5 +1,5 @@
 import { Loader, Plugin } from 'esbuild';
-import { BARE_IMPORT_RE } from "../constants";
+import { BARE_IMPORT_RE } from "../node/constants";
 import { init, parse } from 'es-module-lexer';
 import path from 'path';
 import resolve from "resolve";

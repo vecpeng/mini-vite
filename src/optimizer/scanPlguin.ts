@@ -1,5 +1,5 @@
 import { Plugin } from 'esbuild';
-import { BARE_IMPORT_RE, EXTERNAL_TYPES } from '../constants';
+import { BARE_IMPORT_RE, EXTERNAL_TYPES } from '../node/constants';
 
 export function scanPlugin(deps: Set<string>): Plugin {
     return {
