@@ -10,7 +10,7 @@ export function resolvePlugin(): Plugin {
     let serverContext: ServerContext;
     // @ts-ignore
     return {
-        name: "m-vite:resolve",
+        name: "mini-vite:resolve",
         configureServer(s) {
             serverContext = s;
         },

@@ -18,7 +18,7 @@ import resolve from "resolve";
 export function importAnalysisPlugin(): Plugin {
     let serverContext: ServerContext;
     return {
-        name: "m-vite:import-analysis",
+        name: "mini-vite:import-analysis",
         configureServer(s) {
             serverContext = s;
         },

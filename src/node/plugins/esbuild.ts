@@ -7,7 +7,7 @@ import { ServerContext } from "../server";
 
 export function esbuildTransformPlugin(): Plugin {
     return {
-        name: "m-vite:esbuild-transform",
+        name: "mini-vite:esbuild-transform",
         // 加载模块
         async load(id) {
             if (isJSRequest(id)) {

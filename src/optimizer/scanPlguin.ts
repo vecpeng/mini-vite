@@ -21,10 +21,12 @@ export function scanPlugin(deps: Set<string>): Plugin {
             // 记录依赖
             build.onResolve(
                 {
+                    // 以数字字母或者@开头，且第二个符号不能为：（Windows盘符如D:)
                     filter: BARE_IMPORT_RE,
                 },
                 (resolveInfo) => {
                     const { path: id } = resolveInfo;
+                    console.log("preBundle", id)
                     deps.add(id);
                     return {
                         path: id,

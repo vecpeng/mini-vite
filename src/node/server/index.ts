@@ -37,14 +37,14 @@ export async function startDevServer() {
     app.use(transformMiddleware(serverContext));
     // 入口html资源
     app.use(indexHtmlMiddleware(serverContext));
-    app.listen(3000, async () => {
+    app.listen(3001, async () => {
         // 依赖预构建
         await optimize(root);
         console.log(
             green("🚀 No-Bundle 服务已经成功启动!"),
             `耗时: ${Date.now() - startTime}ms`
         );
-        console.log(`> 本地访问路径: ${blue("http://localhost:3000")}`);
+        console.log(`> 本地访问路径: ${blue("http://localhost:3001")}`);
     })
 }
 

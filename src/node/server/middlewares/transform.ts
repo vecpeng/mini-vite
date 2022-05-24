@@ -2,6 +2,7 @@ import { NextHandleFunction } from "connect";
 import {
     isJSRequest,
     cleanUrl,
+    isCSSRequest
 } from "../../utils";
 import { ServerContext } from "../index";
 import createDebug from "debug";
@@ -43,8 +44,9 @@ export function transformMiddleware(
         const url = req.url ?? "";
         debug("transformMiddleware: %s", url);
 
-        if (isJSRequest(url)) {
-            let result = await  transformRequest(url!, serverContext);
+        // 处理js和css请求
+        if (isJSRequest(url) || isCSSRequest(url)) {
+            let result = await transformRequest(url!, serverContext);
             if (!result) {
                 return next();
             }

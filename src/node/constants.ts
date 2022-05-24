@@ -1,6 +1,6 @@
 import path from 'path';
 
-export const PRE_BUNDLE_DIR = path.join("node_modules", ".m-vite");
+export const PRE_BUNDLE_DIR = path.join("node_modules", ".mini-vite");
 export const EXTERNAL_TYPES = [
     "css",
     "less",

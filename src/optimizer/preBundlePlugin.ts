@@ -18,6 +18,7 @@ export function preBundlePlugin(deps: Set<string>): Plugin {
                     },
                     (resolveInfo) => {
                         const {path: id, importer} = resolveInfo;
+                        console.log(resolveInfo)
                         const isEntry = !importer;
                         if (deps.has(id)) {
                             return isEntry
